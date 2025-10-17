@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter.ttc');
+}
+
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Inter';
 }
 
 .logo {
@@ -12,12 +18,12 @@
 .div-logo {
     display: flex;
     margin: auto;
-    justify-content: center;
-    align-items: center;
+    margin-right: 300px;
 }
 
-header {
+.header {
     display: flex;
+    justify-content: center;
     background-color: rgb(70, 70, 70);
 }
 
@@ -40,23 +46,49 @@ h2 {
     margin: 5px;
 }
 
+.list-product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .product {
     border: 2px solid rgb(50, 50, 50);
     border-radius: 10px;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     padding: 5px;
     margin-left: 50px;
     margin-bottom: 25px;
     margin-right: 25px;
     background-color: rgb(50, 50, 50);
     color: white;
-    height: 200px;
-    width: 250px;
+    height: auto;
+    width: 350px;
 
 }
 
+.desc-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.desc-product button {
+    display: inline-block;
+}
+
 .img-product {
-    width: 10%;
-    height: 10%;
+    width: 50%;
     border-radius: 5px;
+    margin-right: 5px;
+}
+
+button {
+    border-radius: 17px;
+    background-color: orangered;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
 }

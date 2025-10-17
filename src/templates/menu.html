@@ -10,30 +10,35 @@
     </head>
 
     <body>
-        <header>
+        <header class="header">
             <nav class="left-header">
-                <h3>Home</h3>
-                <h3>Add</h3>
+                    <h3>Home</h3>
+                    <h3>Add</h3>
             </nav>
             <div class="div-logo">
-                <img class="logo" src="/static/img/logo/1.png" alt="logo">
-            </div>
+                <img class="logo" src="/static/img/logo/1.png" alt="logo">  
+            </div>       
         </header>
 
         <h2>Les Produits</h2>
+        <div class="list-product">
         {{range .}}
         <div class="product">
             <img class="img-product" src="{{.PicturePath}}" alt="{{.Name}}">
             <div class="desc-product">
-                <h6>{{.Name}}</h6>
+                <h5>{{.Name}}</h5>
                 {{if .InSale}}
                 <p>Nouveau prix ! {{.Price}}</p>
-                {{else}}
+                    {{else}}
                 <p>{{.Price}}</p>
                 {{end}}
+                <div class="product-button">
+                    <button>En savoir plus</button>
+                </div>
             </div>
         </div>
         {{end}}
+        </div>
     </body>
 
 </html>
