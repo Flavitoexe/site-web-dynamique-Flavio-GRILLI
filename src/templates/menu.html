@@ -1,0 +1,40 @@
+{{define "menu"}}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>StreetShop</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="left-header">
+                <h3>Home</h3>
+                <h3>Add</h3>
+            </nav>
+            <div class="div-logo">
+                <img class="logo" src="/static/img/logo/1.png" alt="logo">
+            </div>
+        </header>
+
+        <h2>Les Produits</h2>
+        {{range .}}
+        <div class="product">
+            <img class="img-product" src="{{.PicturePath}}" alt="{{.Name}}">
+            <div class="desc-product">
+                <h6>{{.Name}}</h6>
+                {{if .InSale}}
+                <p>Nouveau prix ! {{.Price}}</p>
+                {{else}}
+                <p>{{.Price}}</p>
+                {{end}}
+            </div>
+        </div>
+        {{end}}
+    </body>
+
+</html>
+{{end}}
