@@ -126,3 +126,27 @@ button {
     padding: 20px;
 
 }
+
+.div-form {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    margin: 50px;
+}
+
+form {
+    display: inline-block;
+    flex-direction: column;
+    margin: 5px;
+}
+
+input {
+
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+}

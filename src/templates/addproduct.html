@@ -1,0 +1,39 @@
+{{define "addproduct"}}
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>Ajout d'un produit</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="left-header">
+                    <a href="/"><h3>Home</h3></a>
+                    <h3>Add</h3>
+            </nav>
+            <div class="div-logo">
+                <img class="logo" src="/static/img/logo/1.png" alt="logo">  
+            </div>       
+        </header>
+
+        <div class="div-form">
+            <h1>Ajouter un produit</h1>
+            <div class="formm">
+                <form method="POST" class="form" action="addproduct" >
+                    <input type="name" name="Name" placeholder="Nom du produit">
+                    <input type="description" name="Desc" placeholder="Décrivez le produit">
+                    <input type="price", name="Price" placeholder="Prix du produit">
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+
+        </div>
+        
+    </body>
+
+</html>
+{{end}}
