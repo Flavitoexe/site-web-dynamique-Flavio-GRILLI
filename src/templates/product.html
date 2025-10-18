@@ -1,4 +1,4 @@
-{{define "menu"}}
+{{define "product"}}
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/static/css/style.css">
-        <title>StreetShop</title>
+        <title>{{.Name}}</title>
     </head>
 
     <body>
@@ -20,13 +20,14 @@
             </div>       
         </header>
 
-        <h2>Les Produits</h2>
-        <div class="list-product">
-        {{range .}}
-            <div class="product">
+        <main class="main-product">
+            <div class="product-product">
                 <img class="img-product" src="{{.PicturePath}}" alt="{{.Name}}">
-                <div class="desc-product">
-                    <h5>{{.Name}}</h5>
+                <div class="desc-product-product">
+                    <h1>{{.Name}}</h1>
+
+                    <p>Tailles disponibles : S | M | L<br></p>
+                    <p>{{.Desc}}</p>
 
                     {{if .InSale}}
                     <p class="discounted"><s>{{.Price}}€</s> {{.Apply50Discount}}€</p>
@@ -35,13 +36,12 @@
                     {{end}}
 
                     <div class="product-button">
-                        <a href="/product/{{.ID}}"><button>En savoir plus</button></a>
+                        <button>Ajouter au panier</button>
                     </div>
+
                 </div>
             </div>
-        {{end}}
-        </div>
-
+        </main>
     </body>
 
 </html>

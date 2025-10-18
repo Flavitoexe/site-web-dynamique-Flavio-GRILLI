@@ -10,6 +10,11 @@
     font-family: 'Inter';
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .logo {
     width: 15%;
     height: 15%;
@@ -43,7 +48,7 @@ h2 {
 }
 
 .left-header h3 {
-    margin: 5px;
+    margin: 7px;
 }
 
 .list-product {
@@ -69,10 +74,15 @@ h2 {
 
 }
 
+.discounted {
+    color: red;
+}
+
 .desc-product {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-left: 5px;
 }
 
 .desc-product button {
@@ -91,4 +101,28 @@ button {
     padding: 5px;
     border: none;
     cursor: pointer;
+}
+
+.main-product {
+    display: flex;
+    justify-content: center;
+}
+
+.product-product {
+    border: 2px solid rgb(50, 50, 50);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    margin: 50px;
+}
+
+.main-product .desc-product-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+
 }
