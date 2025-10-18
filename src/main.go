@@ -42,7 +42,7 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.String() != "/" {
-			// Gestion d'erreur à faire
+			http.NotFound(w, r)
 		}
 		listTemplates.ExecuteTemplate(w, "menu", listProducts)
 	})
@@ -80,7 +80,7 @@ func main() {
 
 		if r.Method == http.MethodPost {
 			priceFloat, err := strconv.ParseFloat(r.FormValue("Price"), 64)
-			if err != nil {
+			if err != nil || priceFloat < 0 {
 				http.Error(w, "Erreur : Prix incorrect", http.StatusBadRequest)
 				return
 			}
